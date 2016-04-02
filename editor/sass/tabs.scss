@@ -22,18 +22,13 @@ ul.red-ui-tabs {
     height: 35px;
     box-sizing:border-box;
     white-space: nowrap;
-    border-bottom: 1px solid $primary-border-color;
-    background: #fff;
+    background: $tab-background;
     @include disable-selection;
 }
 
 ul.red-ui-tabs li {
     box-sizing: border-box;
     display: inline-block;
-    border-left: 1px solid  $primary-border-color;
-    border-top: 1px solid  $primary-border-color;
-    border-right: 1px solid $primary-border-color;
-    border-bottom: 1px solid $primary-border-color;
     background: $tab-background-inactive;
     margin: 3px 3px 0 3px;
     height: 32px;
@@ -42,6 +37,8 @@ ul.red-ui-tabs li {
     width: 14%;
     overflow: hidden;
     white-space: nowrap;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 ul.red-ui-tabs li a.red-ui-tab-label {
@@ -50,7 +47,7 @@ ul.red-ui-tabs li a.red-ui-tab-label {
     padding-left: 12px;
     width: 100%;
     height: 100%;
-    color: #666;
+    color: $tab-background-text-inactive;
 }
 ul.red-ui-tabs li {
     position: relative;
@@ -102,11 +99,11 @@ ul.red-ui-tabs li a:focus {
 
 ul.red-ui-tabs li.active {
     background: $tab-background-active;
-    font-weight: bold;
-    border-bottom: 1px solid #fff;
+    color: $tab-background-text-active;
 }
 ul.red-ui-tabs li.active a {
-    color: #333;
+    font-size: 16px;
+    color: $tab-background-text-active;
 }
 
 ul.red-ui-tabs li img {

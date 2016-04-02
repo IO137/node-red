@@ -18,6 +18,10 @@
     display: none;
 }
 
+.flow-canvas {
+  fill: $back-canvas;
+}
+
 .lasso {
     stroke-width: 1px;
     stroke: #ff7f0e;
@@ -61,7 +65,7 @@
 }
 .node_label {
     stroke-width: 0;
-    fill: #333;
+    fill: $node-label;
     font-size: 14px;
     pointer-events: none;
     -webkit-touch-callout: none;
@@ -70,7 +74,7 @@
 
 .port_label {
     stroke-width: 0;
-    fill: #888;
+    fill: $port-label-background;
     font-size: 16px;
     alignment-baseline: middle;
     text-anchor: middle;
@@ -84,7 +88,7 @@
     font-size: 12px;
 }
 .node {
-    stroke: #999;
+    stroke: $node-outline;
     cursor: move;
     stroke-width: 1;
 }
@@ -112,12 +116,20 @@
 
 .node_button {
     fill: inherit;
-
 }
+
+.node_icon_shade_border {
+  stroke: $node-stroke;
+}
+
+.node_button_button_outer {
+  fill: $node-button-button-outer;
+}
+
 .port {
-    stroke: #999;
+    stroke: $port-outline;
     stroke-width: 1;
-    fill: #ddd;
+    fill: $port-fill;
     cursor: crosshair;
 }
 
@@ -175,8 +187,8 @@
 }
 
 .port_hovered {
-    stroke: $port-selected-color;
-    fill:  $port-selected-color;
+    stroke: $port-selected-color-stroke;
+    fill:  $port-selected-color-fill;
 }
 .subflowport {
     stroke-dasharray: 5,5;

@@ -15,6 +15,8 @@
  **/
 
 @import "colors";
+@import "electron-colors";
+
 @import "mixins";
 
 @import "forms";
@@ -26,6 +28,7 @@
 
 @import "header";
 @import "palette";
+@import "palette-nodes";
 @import "sidebar";
 @import "workspace";
 @import "workspaceToolbar";
@@ -47,12 +50,14 @@
 
 @import "keyboard";
 
+@import "electron";
+
 
 body {
     font-size: 14px;
-    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     padding-top: 100px;
-    background: #f3f3f3;
+    background: $back-darker;
 }
 
 #main-container {
@@ -73,19 +78,15 @@ i.spinner {
 }
 
 code, pre {
-  padding: 0 3px 2px;
-  font-family: monospace;
-  font-size: 14px;
-  color: #333333;
+  font-family: Raleway;
+  color: $text-color;
   border-radius: 1px;
 }
 
 code {
-  padding: 0px 4px;
-  color: #AD1625;
+  color: $code-color;
   white-space: nowrap;
-  background-color: #f7f7f9;
-  border: 1px solid #e1e1e8;
+  background-color: $back-darker;
 }
 
 pre {

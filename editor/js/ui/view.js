@@ -200,7 +200,7 @@ RED.view = (function() {
     var outer_background = vis.append('svg:rect')
         .attr('width', space_width)
         .attr('height', space_height)
-        .attr('fill','#fff');
+        .attr('class','flow-canvas');
 
     var gridScale = d3.scale.linear().range([0,space_width]).domain([0,space_width]);
     var grid = vis.append('g');
@@ -1467,16 +1467,17 @@ RED.view = (function() {
                             .attr("ry",5)
                             .attr("width",32)
                             .attr("height",node_height-4)
-                            .attr("fill","#eee");//function(d) { return d._def.color;})
+                            //.attr("fill","#eee");//function(d) { return d._def.color;})
+                            .attr("class","node_button_button_outer")
                         nodeButtonGroup.append('rect')
-                            .attr("class","node_button_button")
+                            .attr("class","node_button_button " + d._def.node_id)
                             .attr("x",function(d) { return d._def.align == "right"? 11:5})
                             .attr("y",4)
                             .attr("rx",4)
                             .attr("ry",4)
                             .attr("width",16)
                             .attr("height",node_height-12)
-                            .attr("fill",function(d) { return d._def.color;})
+                            //.attr("fill",function(d) { return d._def.color;})
                             .attr("cursor","pointer")
                             .on("mousedown",function(d) {if (!lasso && !d.changed) {focusView();d3.select(this).attr("fill-opacity",0.2);d3.event.preventDefault(); d3.event.stopPropagation();}})
                             .on("mouseup",function(d) {if (!lasso && !d.changed) { d3.select(this).attr("fill-opacity",0.4);d3.event.preventDefault();d3.event.stopPropagation();}})
@@ -1493,11 +1494,11 @@ RED.view = (function() {
                     }
 
                     var mainRect = node.append("rect")
-                        .attr("class", "node")
+                        .attr("class", "node " + d._def.node_id)
                         .classed("node_unknown",function(d) { return d.type == "unknown"; })
                         .attr("rx", 5)
                         .attr("ry", 5)
-                        .attr("fill",function(d) { return d._def.color;})
+                        //.attr("fill",function(d) { return d._def.color;})
                         .on("mouseup",nodeMouseUp)
                         .on("mousedown",nodeMouseDown)
                         .on("touchstart",function(d) {
@@ -1559,8 +1560,8 @@ RED.view = (function() {
                         var icon_shade_border = icon_group.append("path")
                             .attr("d",function(d) { return "M 30 1 l 0 "+(d.h-2)})
                             .attr("class","node_icon_shade_border")
-                            .attr("stroke-opacity","0.1")
-                            .attr("stroke","#000")
+                            //.attr("stroke-opacity","0.1")
+                            //.attr("stroke","#000")
                             .attr("stroke-width","1");
 
                         if ("right" == d._def.align) {

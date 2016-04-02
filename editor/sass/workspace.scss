@@ -17,7 +17,7 @@
 
 #chart {
    overflow: auto;
-   background: #e3e3e3;
+   background-color: $main-background;
    position: absolute;
    bottom:25px;
    top: 35px;
@@ -39,6 +39,7 @@
     bottom: 0px;
     right: 322px;
     overflow: hidden;
+    background-color: $main-background;
     @include component-border;
 }
 
@@ -57,8 +58,7 @@
     right: 0;
     height: 35px;
     width: 35px;
-    background: #fff;
-    border-bottom: 1px solid $primary-border-color;
+    background: $back-lighter;
 }
 
 #btn-workspace-add-tab {
@@ -68,7 +68,6 @@
     width: 32px;
     margin-top: 3px;
     margin-right:3px;
-    border: 1px solid $primary-border-color;
 }
 
 #workspace-footer {

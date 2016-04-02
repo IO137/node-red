@@ -20,7 +20,7 @@
 
 <script type="text/x-red" data-help-name="unknown">
     <p>This node is a type unknown to your installation of Node-RED.</p>
-    <p><i>If you deploy with the node in this state, it's configuration will be preserved, but
+    <p><i>If you deploy with the node in this state, its configuration will be preserved, but
     the flow will not start until the missing type is installed.</i></p>
     <p>It is possible this node type is already installed, but is missing a dependency. Check the Node-RED start-up log for
        any error messages associated with the missing node type. Use <b>npm install &lt;module&gt;</b> to install any missing modules
@@ -46,3 +46,9 @@
         }
     });
 </script>
+<style>
+    .palette_node_unknown {
+      fill: #fff0f0;
+      background-color: #fff0f0;
+    }
+</style>

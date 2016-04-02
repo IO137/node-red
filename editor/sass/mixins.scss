@@ -80,8 +80,8 @@
 
 
 @mixin component-footer {
-    border-top: 1px solid $primary-border-color;
-    background: #f3f3f3;
+    border-top: 1px solid $back-darker;
+    background: $back-lighter;
     text-align: right;
     position: absolute;
     bottom: 0;

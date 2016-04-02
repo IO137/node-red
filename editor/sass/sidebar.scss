@@ -38,16 +38,19 @@
     bottom: 25px;
     left: 0px;
     overflow-y: auto;
+    color: $text-color;
+    padding: 10px;
+    background-color: $sidebar-back;
 }
 
 #sidebar-separator {
     position: absolute;
-    top: 5px;
+    top: 0px;
     right: 315px;
-    bottom:10px;
+    bottom:0px;
     width: 7px;
-    background: url(images/grip.png) no-repeat 50% 50%;
     cursor: col-resize;
+    background-color: $back-lighter;
 }
 
 .sidebar-closed > #sidebar { display: none; }

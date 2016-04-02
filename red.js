@@ -19,12 +19,14 @@ var https = require('https');
 var util = require("util");
 var express = require("express");
 var crypto = require("crypto");
+var bcrypt;
 try { bcrypt = require('bcrypt'); }
 catch(e) { bcrypt = require('bcryptjs'); }
 var nopt = require("nopt");
 var path = require("path");
 var fs = require("fs-extra");
 var RED = require("./red/red.js");
+var when = require('when');
 
 var server;
 var app = express();
@@ -245,41 +247,53 @@ function getListenPath() {
     return listenPath;
 }
 
-RED.start().then(function() {
+// Return a promise that is resolved when node-red starts
+module.exports = when.promise(function(resolve,reject) {
+
+  RED.start().then(function() {
+    console.log("RED.start()")
     if (settings.httpAdminRoot !== false || settings.httpNodeRoot !== false || settings.httpStatic) {
-        server.on('error', function(err) {
-            if (err.errno === "EADDRINUSE") {
-                RED.log.error(RED.log._("server.unable-to-listen", {listenpath:getListenPath()}));
-                RED.log.error(RED.log._("server.port-in-use"));
-            } else {
-                RED.log.error(RED.log._("server.uncaught-exception"));
-                if (err.stack) {
-                    RED.log.error(err.stack);
-                } else {
-                    RED.log.error(err);
-                }
-            }
-            process.exit(1);
-        });
-        server.listen(settings.uiPort,settings.uiHost,function() {
-            if (settings.httpAdminRoot === false) {
-                RED.log.info(RED.log._("server.admin-ui-disabled"));
-            }
-            process.title = 'node-red';
-            RED.log.info(RED.log._("server.now-running", {listenpath:getListenPath()}));
-        });
+      server.on('error', function(err) {
+        if (err.errno === "EADDRINUSE") {
+          RED.log.error(RED.log._("server.unable-to-listen", {
+            listenpath: getListenPath()
+          }));
+          RED.log.error(RED.log._("server.port-in-use"));
+        } else {
+          RED.log.error(RED.log._("server.uncaught-exception"));
+          if (err.stack) {
+            RED.log.error(err.stack);
+          } else {
+            RED.log.error(err);
+          }
+        }
+        process.exit(1);
+      });
+      server.listen(settings.uiPort, settings.uiHost, function() {
+        if (settings.httpAdminRoot === false) {
+          RED.log.info(RED.log._("server.admin-ui-disabled"));
+        }
+        process.title = 'node-red';
+        RED.log.info(RED.log._("server.now-running", {
+          listenpath: getListenPath()
+        }));
+        console.log("RED.start() complete")
+        resolve(true);
+      });
     } else {
-        RED.log.info(RED.log._("server.headless-mode"));
+      RED.log.info(RED.log._("server.headless-mode"));
+      resolve(true);
     }
-}).otherwise(function(err) {
+  }).otherwise(function(err) {
+    reject("RED.start() failed");
     RED.log.error(RED.log._("server.failed-to-start"));
     if (err.stack) {
-        RED.log.error(err.stack);
+      RED.log.error(err.stack);
     } else {
-        RED.log.error(err);
+      RED.log.error(err);
     }
+  });
 });
-
 
 process.on('uncaughtException',function(err) {
     util.log('[red] Uncaught Exception:');
@@ -288,7 +302,7 @@ process.on('uncaughtException',function(err) {
     } else {
         util.log(err);
     }
-    process.exit(1);
+    //process.exit(1);
 });
 
 process.on('SIGINT', function () {

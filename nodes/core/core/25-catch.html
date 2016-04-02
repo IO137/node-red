@@ -62,6 +62,10 @@
    <p>If the message already had a <code>error</code> property, it is copied to <code>_error</code>.</p>
 </script>
 <style>
+.palette_node_catch {
+  fill: #6D2222;
+  background-color: #6D2222;
+}
 #node-input-catch-target-container {
     position: relative;
 }
@@ -97,7 +101,7 @@
 <script type="text/javascript">
     RED.nodes.registerType('catch',{
         category: 'input',
-        color:"#e49191",
+        color:"#8C2020",
         defaults: {
             name: {value:""},
             scope: {value:null}

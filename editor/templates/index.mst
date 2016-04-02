@@ -23,6 +23,7 @@
 <head>
 <title>{{ page.title }}</title>
 <link rel="icon" type="image/png" href="{{ page.favicon }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="vendor/jquery/css/smoothness/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" media="screen">
 <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
@@ -37,32 +38,32 @@
 <div id="header">
     <span class="logo">{{#header.url}}<a href="{{.}}">{{/header.url}}{{#header.image}}<img src="{{.}}" title="{{version}}">{{/header.image}} <span>{{ header.title }}</span>{{#header.url}}</a>{{/header.url}}</span>
     <ul class="header-toolbar hide">
-        <li><a id="btn-sidemenu" class="button" data-toggle="dropdown" href="#"><i class="fa fa-bars"></i></a></li>
+        <li><a id="btn-sidemenu" class="button" data-toggle="dropdown"><i class="fa fa-bars"></i></a></li>
     <ul>
 </div>
 <div id="main-container" class="sidebar-closed hide">
     <div id="palette">
         <img src="red/images/spin.svg" class="palette-spinner hide"/>
         <div id="palette-search">
-            <i class="fa fa-search"></i><input id="palette-search-input" type="text" data-i18n="[placeholder]palette.filter"><a href="#" id="palette-search-clear"><i class="fa fa-times"></i></a></input>
+            <i class="fa fa-search"></i><input id="palette-search-input" type="text" data-i18n="[placeholder]palette.filter"><a id="palette-search-clear"><i class="fa fa-times"></i></a></input>
         </div>
         <div id="palette-container" class="palette-scroll"></div>
         <div id="palette-footer">
-            <a class="palette-button" id="palette-collapse-all" href="#"><i class="fa fa-angle-double-up"></i></a>
-            <a class="palette-button" id="palette-expand-all" href="#"><i class="fa fa-angle-double-down"></i></a>
+            <a class="palette-button" id="palette-collapse-all" ><i class="fa fa-angle-double-up"></i></a>
+            <a class="palette-button" id="palette-expand-all" ><i class="fa fa-angle-double-down"></i></a>
         </div>
 
     </div><!-- /palette -->
 
     <div id="workspace">
         <ul id="workspace-tabs"></ul>
-        <div id="workspace-add-tab"><a id="btn-workspace-add-tab" href="#"><i class="fa fa-plus"></i></a></div>
+        <div id="workspace-add-tab"><a id="btn-workspace-add-tab" ><i class="fa fa-plus"></i></a></div>
         <div id="chart"></div>
         <div id="workspace-toolbar"></div>
         <div id="workspace-footer">
-            <a class="workspace-footer-button" id="btn-zoom-out" href="#"><i class="fa fa-minus"></i></a>
-            <a class="workspace-footer-button" id="btn-zoom-zero" href="#"><i class="fa fa-circle-o"></i></a>
-            <a class="workspace-footer-button" id="btn-zoom-in" href="#"><i class="fa fa-plus"></i></a>
+            <a class="workspace-footer-button" id="btn-zoom-out" ><i class="fa fa-minus"></i></a>
+            <a class="workspace-footer-button" id="btn-zoom-zero" ><i class="fa fa-circle-o"></i></a>
+            <a class="workspace-footer-button" id="btn-zoom-in" ><i class="fa fa-plus"></i></a>
         </div>
     </div>
     <div id="sidebar">
@@ -131,7 +132,7 @@
     <form class="form-horizontal">
         <div class="form-row">
             <ul id="node-dialog-library-breadcrumbs" class="breadcrumb">
-                <li class="active"><a href="#" data-i18n="[append]library.breadcrumb"></a></li>
+                <li class="active"><a  data-i18n="[append]library.breadcrumb"></a></li>
             </ul>
         </div>
         <div class="form-row">

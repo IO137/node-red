@@ -131,7 +131,7 @@ RED.palette = (function() {
             var rootCategory = category.split("-")[0];
 
             var d = document.createElement("div");
-            d.id = "palette_node_"+nodeTypeId;
+            d.id = def.node_id = "palette_node_"+nodeTypeId;
             d.type = nt;
 
             var label = /^(.*?)([ -]in|[ -]out)?$/.exec(nt)[1];
@@ -145,7 +145,7 @@ RED.palette = (function() {
 
             $('<div/>',{class:"palette_label"+(def.align=="right"?" palette_label_right":"")}).appendTo(d);
 
-            d.className="palette_node";
+            d.className="palette_node " + d.id;
 
 
             if (def.icon) {
@@ -159,7 +159,7 @@ RED.palette = (function() {
                 $('<div/>',{class:"palette_icon",style:"background-image: url(icons/"+icon_url+")"}).appendTo(iconContainer);
             }
 
-            d.style.backgroundColor = def.color;
+            //d.style.backgroundColor = def.color;
 
             if (def.outputs > 0) {
                 var portOut = document.createElement("div");

@@ -17,3 +17,8 @@ node_modules
 public
 locales/zz-ZZ
 nodes/core/locales/zz-ZZ
+node-red-linux-ia32
+node-red-linux-x64
+node-red-win32-ia32
+node-red-win32-x64
+.babelrc
