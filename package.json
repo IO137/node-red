@@ -1,6 +1,6 @@
 {
   "name": "node-red",
-  "version": "0.13.3",
+  "version": "0.13.4",
   "description": "A visual tool for wiring the Internet of Things",
   "homepage": "http://nodered.org",
   "license": "Apache-2.0",
@@ -18,19 +18,11 @@
     "node-red-pi": "bin/node-red-pi"
   },
   "contributors": [
-    {
-      "name": "Nick O'Leary"
-    },
-    {
-      "name": "Dave Conway-Jones"
-    }
+    {"name": "Nick O'Leary"},
+    {"name": "Dave Conway-Jones"}
   ],
   "keywords": [
-    "editor",
-    "messaging",
-    "iot",
-    "ibm",
-    "flow"
+    "editor", "messaging", "iot", "ibm", "flow"
   ],
   "dependencies": {
     "babel-cli": "^6.6.5",
