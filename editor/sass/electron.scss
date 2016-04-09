@@ -24,3 +24,252 @@
 ::-webkit-scrollbar-corner {
   background-color: $back-darker;
 }
+
+::-webkit-input-placeholder {
+   color: #333;
+}
+
+pre {
+  color: $text-color;
+  background-color: $back-lightest;
+}
+
+.node-input-rule-value {
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+}
+
+#node-input-property {
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+}
+
+#node-input-field {
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+}
+
+.palette_node_e-mail_in {
+  fill: #147700;
+  background-color: #147700;
+}
+
+.palette_node_e-mail {
+  fill: #147700;
+  background-color: #147700;
+}
+
+.palette_node_twitter_in {
+  fill: #268EC1;
+  background-color: #268EC1;
+}
+
+.palette_node_twitter_out {
+  fill: #268EC1;
+  background-color: #268EC1;
+}
+
+.palette_node_file {
+  fill: #A52B2B;
+  background-color: #A52B2B;
+}
+
+.palette_node_file_in {
+  fill: #A52B2B;
+  background-color: #A52B2B;
+}
+
+.palette_node_tail {
+  fill: #A52B2B;
+  background-color: #A52B2B;
+}
+
+.palette_node_sentiment {
+  fill: #5F2CF9;
+  background-color: #5F2CF9;
+}
+
+.palette_node_feedparse {
+  fill: #00498E;
+  background-color: #00498E;
+}
+
+.palette_node_exec {
+  fill: #8E3618;
+  background-color: #8E3618;
+}
+
+.palette_node_csv {
+  fill: #00498E;
+  background-color: #00498E;
+}
+
+.palette_node_html {
+  fill: #00498E;
+  background-color: #00498E;
+}
+
+.palette_node_json {
+  fill: #00498E;
+  background-color: #00498E;
+}
+
+.palette_node_xml {
+  fill: #00498E;
+  background-color: #00498E;
+}
+
+.palette_node_switch {
+  fill: #925600;
+  background-color: #925600;
+}
+
+.palette_node_change {
+  fill: #925600;
+  background-color: #925600;
+}
+
+.palette_node_range {
+  fill: #925600;
+  background-color: #925600;
+}
+
+.palette_node_mqtt_in {
+  fill: #4E0E4E;
+  background-color: #4E0E4E;
+}
+
+.palette_node_mqtt_out {
+  fill: #4E0E4E;
+  background-color: #4E0E4E;
+}
+
+.palette_node_http_response {
+  fill: #5D5D07;
+  background-color: #5D5D07;
+}
+
+.palette_node_http_in {
+  fill: #5D5D07;
+  background-color: #5D5D07;
+}
+
+.palette_node_websocket_in {
+  fill: #5D5D07;
+  background-color: #5D5D07;
+}
+
+.palette_node_websocket_out {
+  fill: #5D5D07;
+  background-color: #5D5D07;
+}
+
+.palette_node_watch {
+  fill: #6D4E26;
+  background-color: #6D4E26;
+}
+
+.palette_node_tcp_in {
+  fill: #545454;
+  background-color: #545454;
+}
+
+.palette_node_tcp_out {
+  fill: #545454;
+  background-color: #545454;
+}
+
+.palette_node_tcp_request {
+  fill: #545454;
+  background-color: #545454;
+}
+
+.palette_node_udp_in {
+  fill: #545454;
+  background-color: #545454;
+}
+
+.palette_node_udp_out {
+  fill: #545454;
+  background-color: #545454;
+}
+
+.palette_node_rpi_keyboard {
+  fill: #c6dbef;
+  background-color: #c6dbef;
+}
+
+.palette_node_inject {
+  fill: #25517B;
+  background-color: #25517B;
+}
+
+.palette_node_catch {
+  fill: #6D2222;
+  background-color: #6D2222;
+}
+
+.palette_node_status {
+  fill: #6D2222;
+  background-color: #6D2222;
+}
+
+.palette_node_debug {
+  fill: #1F6323;
+  background-color: #1F6323;
+}
+
+.palette_node_function {
+  fill: #5D4A37;
+  background-color: #5D4A37;
+}
+
+.palette_node_template {
+  fill: #8A5008;
+  background-color: #8A5008;
+}
+
+.palette_node_delay {
+  fill: #3B2679;
+  background-color: #3B2679;
+}
+
+.palette_node_trigger {
+  fill: #3B2679;
+  background-color: #3B2679;
+}
+
+.palette_node_comment {
+  fill: #181818;
+  background-color: #181818;
+}
+
+.palette_node_unknown {
+  fill: #fff0f0;
+  background-color: #fff0f0;
+}
+
+.palette_node_http_request {
+  fill: #5D5D07;
+  background-color: #5D5D07;
+}
+
+.palette_node_rbe {
+  fill: #751992;
+  background-color: #751992;
+}
+
+.palette_node_serial_in {
+  fill: #751992;
+  background-color: #751992;
+}
+
+.palette_node_serial_out {
+  fill: #751992;
+  background-color: #751992;
+}
+
+.palette_node_djvu-pages {
+  fill: #7B2158;
+  background-color: #7B2158;
+}

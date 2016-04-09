@@ -66,10 +66,10 @@
 }
 
 .sidebar-header {
-    color: #666;
+    color: $text-color;
     text-align: right;
     padding: 8px 10px;
-    background: #f3f3f3;
+    background: $back-lighter;
     border-bottom: 1px solid $secondary-border-color;
 }
 

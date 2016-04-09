@@ -1,6 +1,12 @@
 $back-lighter: #282828;
 $back-darker: #181818;
 $back-canvas: #181818;
+$back-lightest: #383838;
+$form-background: #ccc;
+$form-background-hover: #fff;
+$form-background-focus: #fff;
+$form-text: #000;
+$form-placeholder-color: #444;
 
 $palette-content-color: $back-lighter;
 $palette-node-border: #fff;
@@ -17,8 +23,8 @@ $node-stroke: #fff;
 $port-selected-color-fill: #bbb;
 $port-selected-color-stroke: #fff;
 $node-outline: #fff;
-$link-color: #fff;
-$node-selected-color: #bbb;
+$link-color: #bbb;
+$node-selected-color: #fff;
 $node-opacity: .75;
 $palette-header-background: $back-lighter;
 $palette-header-text: #eee;
@@ -39,6 +45,7 @@ $main-background: $back-darker;
 $text-color: #fff;
 $sidebar-back: $back-darker;
 $code-color: #00d95a;
+$primary-color: #00d95a;
 
 $workspace-button-color: #fff;
 $workspace-button-background: $back-lighter;
@@ -47,3 +54,8 @@ $tab-background-hover: $back-darker;
 $workspace-button-color-hover: #fff;
 $workspace-button-background-hover: $back-darker;
 $primary-border-color: $back-darker;
+$workspace-button-color: #fff;
+$form-text-color: #fff;
+
+$typedInput-button-background-hover: #fff;
+$typedInput-button-background: $form-background;

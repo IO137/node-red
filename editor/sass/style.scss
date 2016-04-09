@@ -50,9 +50,6 @@
 
 @import "keyboard";
 
-@import "electron";
-
-
 body {
     font-size: 14px;
     font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -112,3 +109,5 @@ pre code {
   background-color: transparent;
   border: 0;
 }
+
+@import "electron";

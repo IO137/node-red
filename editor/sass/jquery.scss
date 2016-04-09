@@ -14,16 +14,46 @@
  * limitations under the License.
  **/
 
+ .ui-spinner-button {
+   background-color: $back-darker !important;
+ }
+
+ .ui-widget-content a {
+     color: $text-color;
+ }
+
 .ui-widget {
     font-size: 14px !important;
-    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
+    font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
 }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
     font-size: 14px !important;
-    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
+    font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
 }
 .ui-widget input {
+    border: 0;
+    color: $form-text;
+    background-color: $form-background;
     box-shadow: none;
+}
+.ui-widget input:hover {
+    background-color: $form-background-hover;
+
+}
+.ui-widget input:focus {
+    background-color: $form-background-focus;
+
+}
+
+.ui-button {
+  color: #fff !important;
+  border-radius: 20px !important;
+  background-color: $back-darker !important;
+  border: 1px solid #fff !important;
+}
+
+.ui-state-hover {
+  border-color: $primary-color !important;
 }
 
 /* jQuery Theme overrides */
@@ -39,8 +69,9 @@
 
 .ui-dialog {
     border-radius: 1px;
-    background: #fff;
+    background: $back-darker;
     padding: 0;
+    color: $text-color;
     @include component-shadow;
 }
 .ui-dialog .ui-dialog-content {
@@ -48,13 +79,15 @@
 }
 .ui-dialog .ui-dialog-title {
     width: auto;
+    font-weight: normal;
 }
 .ui-dialog .ui-dialog-titlebar {
     padding: 10px;
-    background: #f3f3f3;
+    background: $back-lighter;
     border: none;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid $back-darker;
     border-radius: 0;
+    color: $text-color;
 }
 .ui-corner-all {
     border-radius: 1px;
@@ -75,6 +108,9 @@
 }
 .ui-dialog .ui-dialog-buttonpane {
     padding: .3em 1em .5em 1em;
+    background-color: $back-lighter;
+    color: $text-color;
+    border: 0;
 }
 
 .ui-spinner {
@@ -95,4 +131,8 @@
     &:focus {
         outline: none;
     }
+}
+
+label {
+  color: $text-color;
 }

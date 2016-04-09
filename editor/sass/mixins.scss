@@ -32,7 +32,7 @@
     @include disable-selection;
     box-sizing: border-box;
     display: inline-block;
-    color: $workspace-button-color;
+    color: $workspace-button-color !important;
     background: $workspace-button-background;
     border: 1px solid $secondary-border-color;
     text-align: center;

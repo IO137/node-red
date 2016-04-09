@@ -21,12 +21,12 @@
      width: 300px;
      padding: 10px;
      height: auto;
-     background: #fff;
-     
+     background: $back-lightest;
+     color: $text-color;
      z-index: 1000;
      font-size: 14px;
      line-height: 1.4em;
-     @include component-shadow;
+     border-radius: 8px;
  }
  .red-ui-popover:after, .red-ui-popover:before {
  	right: 100%;
@@ -38,10 +38,9 @@
  	position: absolute;
  	pointer-events: none;
  }
-
  .red-ui-popover:after {
  	border-color: rgba(136, 183, 213, 0);
- 	border-right-color: #fff;
+ 	border-right-color: $back-lightest;
  	border-width: 10px;
  	margin-top: -10px;
  }
