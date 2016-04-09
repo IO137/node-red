@@ -15,7 +15,7 @@
  **/
 
 .sidebar-node-config {
-    background: #f3f3f3;
+    background: $back-darker;
     height: 100%;
     overflow-y:auto;
     @include disable-selection;

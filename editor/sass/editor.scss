@@ -18,6 +18,14 @@ a {
   color: #64CBFF;
 }
 
+table {
+  color: $text-color;
+}
+
+.help-key {
+  color: #444;
+}
+
 .dialog-form, #dialog-form, #dialog-config-form {
     margin: 0;
     height: 100%;
