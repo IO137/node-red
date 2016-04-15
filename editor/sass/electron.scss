@@ -29,6 +29,15 @@
    color: #333;
 }
 
+.breadcrumb {
+  color: $text-color;
+  background-color: $back-lighter;
+}
+
+#node-select-library {
+  color: $text-color;
+}
+
 pre {
   color: $text-color;
   background-color: $back-lightest;

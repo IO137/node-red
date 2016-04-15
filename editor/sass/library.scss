@@ -26,8 +26,8 @@
     cursor: pointer;
 }
 #node-select-library li.list-selected {
-    background: #eee;
+    background: $back-lighter;
 }
 #node-select-library li.list-hover {
-    background: #ffffd0;
+    background: $back-lighter;
 }

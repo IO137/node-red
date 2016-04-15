@@ -22,11 +22,11 @@ var clone = require("clone");
 
 var defaultContext = {
     page: {
-        title: "Litae",
+        title: "Toolery",
         favicon: "favicon.ico"
     },
     header: {
-        title: "Litae",
+        title: "Toolery",
         image: "red/images/node-red.png"
     },
     asset: {
