@@ -1,18 +1,46 @@
 'use strict';
 
-console.log("starting SmallBall Automator");
+// Babel
+console.log("Starting kobble");
 require('babel-core/register')({
   presets: [ 'es2015', 'stage-0' ],
   only: [/.*node-red-contrib.*/]
 });
 require('babel-polyfill');
+
+//Embed node-red
+var http = require('http');
+var express = require("express");
+var RED = require("./red/red.js");
+
+console.log("Embedding node-red");
+var xapp = express();
+xapp.use("/",express.static("public"));
+var server = http.createServer(xapp);
+var settings = {
+    httpAdminRoot:"/",
+    httpNodeRoot: "/",
+    userDir:__dirname + "/contrib",
+    functionGlobalContext: { }
+};
+RED.init(server,settings);
+xapp.use(settings.httpAdminRoot,RED.httpAdmin);
+xapp.use(settings.httpNodeRoot,RED.httpNode);
+server.listen(1880);
+
+var started = new Promise(function(resolve, reject) {
+  console.log("Starting node-red");
+  RED.start().then(function() {
+    resolve(true);
+  });
+});
+
 const electron = require('electron');
-const app = electron.app;  // Module to control application life.
-const BrowserWindow = electron.BrowserWindow;  // Module to create native browser window.
+const app = electron.app;
+const BrowserWindow = electron.BrowserWindow;
 
 // require starts node-red and returns a promise
-console.log("starting node-red");
-var started = require('./red.js');
+//var started = require('./red.js');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -32,8 +60,8 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
   // Wait for node-red to start before starting browser window
   started.then(function() {
-    console.log("node-red started, creating browser window");
-    mainWindow = new BrowserWindow({width: 800, height: 600, "node-integration": false});
+    console.log("kobble started, creating browser window");
+    mainWindow = new BrowserWindow({width: 800, height: 600, "node-integration": true, icon:__dirname + '/editor/images/kobble.png'});
     // and load the index.html of the app.
     mainWindow.loadURL('http://127.0.0.1:1880');
     // Open the DevTools.
