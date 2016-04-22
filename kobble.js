@@ -1,36 +1,11 @@
 'use strict';
 
-// Babel
-console.log("Starting kobble");
-require('babel-core/register')({
-  presets: [ 'es2015', 'stage-0' ],
-  only: [/.*node-red-contrib.*/]
-});
-require('babel-polyfill');
-
-//Embed node-red
-var http = require('http');
-var express = require("express");
-var RED = require("./red/red.js");
-
-console.log("Embedding node-red");
-var xapp = express();
-xapp.use("/",express.static("public"));
-var server = http.createServer(xapp);
-var settings = {
-    httpAdminRoot:"/",
-    httpNodeRoot: "/",
-    userDir:__dirname + "/contrib",
-    functionGlobalContext: { }
-};
-RED.init(server,settings);
-xapp.use(settings.httpAdminRoot,RED.httpAdmin);
-xapp.use(settings.httpNodeRoot,RED.httpNode);
-server.listen(1880);
-
+// Start a node-red instance
+var child = require('child_process');
+const kob = child.fork(`${__dirname}/kobble-node-red.js`);
 var started = new Promise(function(resolve, reject) {
-  console.log("Starting node-red");
-  RED.start().then(function() {
+  kob.on('message', (m) => {
+    console.log('kobble got message:', JSON.stringify(m));
     resolve(true);
   });
 });
@@ -39,11 +14,6 @@ const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
-// require starts node-red and returns a promise
-//var started = require('./red.js');
-
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
 var mainWindow = null;
 
 // Quit when all windows are closed.

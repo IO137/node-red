@@ -65,6 +65,7 @@
     "passport": "0.3.2",
     "passport-http-bearer": "1.0.1",
     "passport-oauth2-client-password": "0.1.2",
+    "pm2": "^1.1.2",
     "raw-body": "2.1.5",
     "semver": "5.1.0",
     "sentiment": "1.0.6",
