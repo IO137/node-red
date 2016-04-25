@@ -160,6 +160,8 @@ var localfilesystem = {
                 }
             }
 
+        } else if (settings.flowsFullPath) {
+          flowsFullPath = settings.flowsFullPath;
         } else {
             flowsFile = 'flows_'+require('os').hostname()+'.json';
             flowsFullPath = fspath.join(settings.userDir,flowsFile);
@@ -169,8 +171,8 @@ var localfilesystem = {
         var ffBase = fspath.basename(flowsFullPath,ffExt);
         var ffDir = fspath.dirname(flowsFullPath);
 
-        credentialsFile = fspath.join(settings.userDir,ffBase+"_cred"+ffExt);
-        credentialsFileBackup = fspath.join(settings.userDir,"."+ffBase+"_cred"+ffExt+".backup");
+        credentialsFile = fspath.join(settings.userDir,ffBase+"_cred"+".json");
+        credentialsFileBackup = fspath.join(settings.userDir,"."+ffBase+"_cred"+".json"+".backup");
 
         oldCredentialsFile = fspath.join(settings.userDir,"credentials.json");
 
@@ -180,6 +182,8 @@ var localfilesystem = {
 
         libDir = fspath.join(settings.userDir,"lib");
         libFlowsDir = fspath.join(libDir,"flows");
+        if (settings.flowsDir)
+          libFlowsDir = settings.flowsDir;
 
         globalSettingsFile = fspath.join(settings.userDir,".config.json");
 
@@ -244,9 +248,11 @@ var localfilesystem = {
             return when.resolve();
         }
 
-        try {
-            fs.renameSync(flowsFullPath,flowsFileBackup);
-        } catch(err) {
+        if (!settings.noBackup) {
+          try {
+              fs.renameSync(flowsFullPath,flowsFileBackup);
+          } catch(err) {
+          }
         }
 
         var flowData;
@@ -282,9 +288,11 @@ var localfilesystem = {
             return when.resolve();
         }
 
-        try {
-            fs.renameSync(credentialsFile,credentialsFileBackup);
-        } catch(err) {
+        if (!settings.noBackup) {
+          try {
+              fs.renameSync(credentialsFile,credentialsFileBackup);
+          } catch(err) {
+          }
         }
         var credentialData;
         if (settings.flowFilePretty) {
