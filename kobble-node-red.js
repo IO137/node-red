@@ -38,7 +38,7 @@ console.log("port: " + port + " " + " kob:" + ff + " kobbleDir:" + kobbleDir + "
 var xapp = express();
 xapp.use("/",express.static("public"));
 var server = http.createServer(xapp);
-var kobSettings = {
+var settings = {
   flowsFullPath: ff,
   uiPort: port,
   verbose: true,
@@ -48,7 +48,7 @@ var kobSettings = {
   httpNodeRoot: "/",
   userDir:userDir
 };
-var settings = _.merge(userSettings, kobSettings);
+_.merge(settings, userSettings);
 RED.init(server,settings);
 xapp.use(settings.httpAdminRoot,RED.httpAdmin);
 xapp.use(settings.httpNodeRoot,RED.httpNode);
