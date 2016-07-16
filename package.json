@@ -59,7 +59,6 @@
     "node-red-contrib-alexa": "0.0.4",
     "node-red-contrib-coap": "^0.2.0",
     "node-red-contrib-firebase": "^1.1.1",
-    "node-red-contrib-gpio": "^0.8.0",
     "node-red-contrib-mail-parse": "^0.1.1",
     "node-red-contrib-nools": "0.0.6",
     "node-red-contrib-readability": "^5.0.2",

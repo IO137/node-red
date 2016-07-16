@@ -9,6 +9,7 @@
 .tern-project
 *.backup
 *_cred*
+contrib
 coverage
 credentials.json
 flows*.json
