@@ -1,12 +1,12 @@
 {
-  "name": "node-red",
-  "version": "0.13.4",
+  "name": "kobble-pipeplnes",
+  "version": "1.13.4",
   "description": "A visual tool for wiring the Internet of Things",
-  "homepage": "http://nodered.org",
+  "homepage": "http://kobble.io",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/node-red/node-red.git"
+    "url": "https://github.com/kobble-git/node-red.git"
   },
   "main": "./red-es6.js",
   "scripts": {
@@ -23,6 +23,9 @@
     },
     {
       "name": "Dave Conway-Jones"
+    },
+    {
+      "name": "Kobble"
     }
   ],
   "keywords": [
@@ -81,7 +84,6 @@
     "node-red-node-strava": "^0.1.0",
     "node-red-node-tfl": "^0.1.1",
     "node-red-node-twitter": "0.1.*",
-    "node-red-node-watson": "^0.4.3",
     "node-red-node-weather-underground": "^0.1.2",
     "nopt": "3.0.6",
     "oauth2orize": "1.2.2",
@@ -125,6 +127,7 @@
     "supertest": "1.2.0"
   },
   "engines": {
-    "node": ">=0.10"
+    "node": ">=0.10",
+    "atom": ">0.50.0"
   }
 }
