@@ -1,9 +1,9 @@
 {
-  "name": "kobble-pipeplnes",
+  "name": "kobble-pipelines",
   "version": "1.13.4",
   "description": "A visual tool for wiring the Internet of Things",
   "homepage": "http://kobble.io",
-  "license": "Apache-2.0",
+  "license": "SEE LICENSE IN license.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/kobble-git/node-red.git"
@@ -60,11 +60,11 @@
     "mustache": "2.2.1",
     "node-babel": "^0.1.2",
     "node-red-contrib-alexa": "0.0.4",
-    "node-red-contrib-coap": "^0.2.0",
     "node-red-contrib-firebase": "^1.1.1",
     "node-red-contrib-mail-parse": "^0.1.1",
     "node-red-contrib-nools": "0.0.6",
     "node-red-contrib-readability": "^5.0.2",
+    "node-red-contrib-slack": "^0.1.1",
     "node-red-contrib-swagger": "^0.3.2",
     "node-red-node-aws": "^0.1.0",
     "node-red-node-box": "^0.1.0",
@@ -80,7 +80,7 @@
     "node-red-node-jawboneup": "^0.1.0",
     "node-red-node-openweathermap": "^0.1.7",
     "node-red-node-pinboard": "^0.1.1",
-    "node-red-node-rbe": "0.1.*",
+    "node-red-node-pushover": "^0.0.6",
     "node-red-node-strava": "^0.1.0",
     "node-red-node-tfl": "^0.1.1",
     "node-red-node-twitter": "0.1.*",
@@ -101,7 +101,15 @@
     "xml2js": "0.4.16"
   },
   "optionalDependencies": {
+    "node-red-node-arduino": "^0.0.9",
+    "node-red-contrib-coap": "^0.2.0",
+    "node-red-contrib-github" : "^0.1.5",
+    "node-red-node-mongodb": "^0.0.5",
+    "node-red-node-mysql": "^0.0.9",
+    "node-red-node-rbe": "0.1.*",
     "node-red-node-serialport": "0.1.*",
+    "node-red-contrib-tinkerpop": "^0.2.0",
+    "node-red-node-twilio": "0.0.8",
     "bcrypt": "0.8.5"
   },
   "devDependencies": {
