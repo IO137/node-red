@@ -14,7 +14,7 @@
     "test": "./node_modules/.bin/grunt"
   },
   "bin": {
-    "node-red": "./red.js",
+    "node-red": "./red.js"
   },
   "contributors": [
     {
@@ -84,7 +84,6 @@
     "node-red-contrib-slack": "^0.1.1",
     "node-red-contrib-swagger": "^0.3.2",
     "node-red-contrib-tinkerpop": "^0.2.0",
-
     "node-red-node-arduino": "^0.0.9",
     "node-red-node-aws": "^0.1.0",
     "node-red-node-box": "^0.1.0",
@@ -110,7 +109,6 @@
     "node-red-node-twilio": "0.0.8",
     "node-red-node-twitter": "0.1.*",
     "node-red-node-weather-underground": "^0.1.2",
-
     "bcrypt": "0.8.5"
   },
   "devDependencies": {
