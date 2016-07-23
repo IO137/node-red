@@ -15,7 +15,6 @@
   },
   "bin": {
     "node-red": "./red.js",
-    "node-red-pi": "bin/node-red-pi"
   },
   "contributors": [
     {
@@ -86,6 +85,7 @@
     "node-red-contrib-swagger": "^0.3.2",
     "node-red-contrib-tinkerpop": "^0.2.0",
 
+    "node-red-node-arduino": "^0.0.9",
     "node-red-node-aws": "^0.1.0",
     "node-red-node-box": "^0.1.0",
     "node-red-node-delicious": "^0.1.0",
@@ -103,6 +103,7 @@
     "node-red-node-openweathermap": "^0.1.7",
     "node-red-node-pinboard": "^0.1.1",
     "node-red-node-pushover": "^0.0.6",
+    "node-red-node-rbe": "0.1.*",
     "node-red-node-serialport": "0.1.*",
     "node-red-node-strava": "^0.1.0",
     "node-red-node-tfl": "^0.1.1",
