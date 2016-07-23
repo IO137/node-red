@@ -3,7 +3,7 @@
   "version": "1.13.4",
   "description": "A visual tool for wiring the Internet of Things",
   "homepage": "http://kobble.io",
-  "license": "SEE LICENSE IN license.md",
+  "license": "SEE LICENSE IN README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/kobble-git/node-red.git"
