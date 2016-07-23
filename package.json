@@ -77,6 +77,7 @@
     "node-red-contrib-alexa": "0.0.4",
     "node-red-contrib-coap": "^0.2.0",
     "node-red-contrib-firebase": "^1.1.1",
+    "node-red-contrib-fs-ops": "^1.1.5",
     "node-red-contrib-github" : "^0.1.5",
     "node-red-contrib-mail-parse": "^0.1.1",
     "node-red-contrib-nools": "0.0.6",
