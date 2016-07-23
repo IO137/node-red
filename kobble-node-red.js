@@ -3,17 +3,17 @@
 var fs = require('fs');
 var _ = require('lodash');
 var path = require('path');
-var es2015 = path.join(__dirname, "node_modules", "babel-preset-es2015");
-var stage0 = path.join(__dirname, "node_modules", "babel-preset-stage-0");
+//var es2015 = path.join(__dirname, "node_modules", "babel-preset-es2015");
+//var stage0 = path.join(__dirname, "node_modules", "babel-preset-stage-0");
 //console.log("preset: " + es2015 + " " + stage0);
 
 // Babel
 console.log("status:Starting kobble instance...");
-require('babel-core/register')({
-  presets: [ es2015, stage0 ],
-  only: [/.*(kobble).*/]
-});
-require('babel-polyfill');
+//require('babel-core/register')({
+//  presets: [ es2015, stage0 ],
+//  only: [/.*(kobble).*/]
+//});
+//require('babel-polyfill');
 
 //Embed node-red
 var http = require('http');
