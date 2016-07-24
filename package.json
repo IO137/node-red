@@ -1,7 +1,7 @@
 {
   "name": "kobble-pipelines",
   "version": "1.15.2",
-  "description": "A visual tool for wiring the Internet of Things",
+  "description": "A pipeline editor",
   "homepage": "http://kobble.io",
   "license": "SEE LICENSE IN README.md",
   "repository": {
@@ -31,7 +31,8 @@
     "editor",
     "messaging",
     "iot",
-    "ibm",
+    "kobble",
+    "pipeline",
     "flow"
   ],
   "dependencies": {
