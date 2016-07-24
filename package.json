@@ -1,6 +1,6 @@
 {
   "name": "kobble-pipelines",
-  "version": "1.13.4",
+  "version": "1.13.6",
   "description": "A visual tool for wiring the Internet of Things",
   "homepage": "http://kobble.io",
   "license": "SEE LICENSE IN README.md",
@@ -78,7 +78,7 @@
     "node-red-contrib-coap": "^0.2.0",
     "node-red-contrib-firebase": "^1.1.1",
     "node-red-contrib-fs-ops": "^1.1.5",
-    "node-red-contrib-github" : "^0.1.5",
+    "node-red-contrib-github": "^0.1.5",
     "node-red-contrib-mail-parse": "^0.1.1",
     "node-red-contrib-nools": "0.0.6",
     "node-red-contrib-readability": "^5.0.2",
